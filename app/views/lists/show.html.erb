@@ -1,0 +1,9 @@
+<h1><%= @list.name.upcase %></h1>
+
+<ul>
+    <% @list.movies.each do |movie| %>
+        <li><%= movie.title %></li>
+    <% end %>
+</ul>
+      
+<%= link_to "New Bookmark", new_list_bookmark_path(@list) %>
